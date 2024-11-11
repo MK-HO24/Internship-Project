@@ -16,13 +16,17 @@ class MainPage(Page):
 
     def input_username(self):
         wait = WebDriverWait(self.driver, 5)
+        sleep(6)
         self.input_text("bbkam99@gmail.com", *self.USERNAME_FIELD)
 
     def input_password(self):
+        wait = WebDriverWait(self.driver, 5)
+        sleep(6)
         self.input_text("Purpose2024*", *self.PASSWORD_FIELD)
 
 
     def click_continue(self):
+        wait = WebDriverWait(self.driver, 5)
         self.click(*self.CONTINUE_BTN)
 
     def get_current_window(self):

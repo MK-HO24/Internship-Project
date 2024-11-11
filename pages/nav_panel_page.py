@@ -11,6 +11,7 @@ class NavPanel(Page):
     EXPECTED_TEXT_FIELD = (By.XPATH, "//div[text()='Choose maximum amount of agents in yours company']")
 
     def click_connect(self):
+        sleep(6)
         self.click(*self.CONNECT_TO_COMPANY_BTN)
 
 
