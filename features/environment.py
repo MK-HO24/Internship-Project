@@ -36,19 +36,19 @@ def browser_init(context):
 
     ## BROWSERSTACK ###
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-    bs_user = 'kam_Peoa08'
-    bs_key = 'NjaN6Jr5yrjnC47mEhj5'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-
-    options = Options()
-    bstack_options = {
-        "os" : "Windows",
-        "osVersion" : "11",
-        'browserName': 'edge',
-        'sessionName': 'user can navigate to Connect the Company page',
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
+    # bs_user = 'kam_Peoa08'
+    # bs_key = 'NjaN6Jr5yrjnC47mEhj5'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #
+    # options = Options()
+    # bstack_options = {
+    #     "os" : "Windows",
+    #     "osVersion" : "11",
+    #     'browserName': 'edge',
+    #     'sessionName': 'user can navigate to Connect the Company page',
+    # }
+    # options.set_capability('bstack:options', bstack_options)
+    # context.driver = webdriver.Remote(command_executor=url, options=options)
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)

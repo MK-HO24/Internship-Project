@@ -8,7 +8,7 @@ from pages.base_page import Page
 class NavPanel(Page):
 
     CONNECT_TO_COMPANY_BTN = (By.XPATH, "//div[text()='Connect the company']")
-    EXPECTED_TEXT_FIELD = (By.XPATH, "//div[text()='Choose maximum amount of agents in yours company']")
+    EXPECTED_TEXT_FIELD = (By.XPATH, "//div[text()='Choose your plan']")
 
     def click_connect(self):
         sleep(6)
@@ -28,4 +28,4 @@ class NavPanel(Page):
 
 
     def verify_connect(self):
-        self.verify_text("Choose maximum amount of agents in yours company",*self.EXPECTED_TEXT_FIELD)
+        self.verify_text("Choose your plan",*self.EXPECTED_TEXT_FIELD)

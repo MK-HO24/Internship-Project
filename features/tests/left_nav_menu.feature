@@ -2,6 +2,8 @@
 Feature: Test for left Nav menu feature
   # Enter feature description here
 
+
+  @smoke
   Scenario: user can navigate to Connect the Company page
     Given Open reelly main page
     When Input user name
