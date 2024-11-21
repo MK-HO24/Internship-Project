@@ -1,6 +1,10 @@
 from urllib3.util import url
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium import webdriver
+
+driver= webdriver.Chrome()
 
 
 class Page:
@@ -95,3 +99,12 @@ class Page:
     def verify_partial_url(self,expected_url):
         actual_url = self.driver.current_url
         assert expected_url in actual_url, f'Expected {expected_url} not found in actual {actual_text}'
+
+
+    def scroll_to_bottom_of_page(self):
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+
+    def touch_action_scroll(self):
+        actions = ActionChains(driver)
+        actions.scroll_by_amount(0, 100).perform()
